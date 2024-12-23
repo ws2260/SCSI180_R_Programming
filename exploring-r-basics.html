@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3. Exploring R Basics | Introduction to R Programing</title>
+  <meta name="description" content="3. Exploring R Basics | Introduction to R Programing" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3. Exploring R Basics | Introduction to R Programing" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3. Exploring R Basics | Introduction to R Programing" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="installation-of-base-r-and-rstudio.html"/>
+<link rel="next" href="glossary.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Table of Contents</a></li>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html"><i class="fa fa-check"></i><strong>1. Why R Programming?</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html#whats-special-about-r"><i class="fa fa-check"></i><strong>1.1 What’s Special about R?</strong></a></li>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html#r-vs.-microsoft-excel"><i class="fa fa-check"></i><strong>1.2 R vs. Microsoft Excel</strong></a></li>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html#r-vs.-python"><i class="fa fa-check"></i><strong>1.3 R vs. Python</strong></a></li>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html#takeaway"><i class="fa fa-check"></i><strong>1.4 Takeaway</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="installation-of-base-r-and-rstudio.html"><a href="installation-of-base-r-and-rstudio.html"><i class="fa fa-check"></i><strong>2. Installation of Base R and RStudio</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="installation-of-base-r-and-rstudio.html"><a href="installation-of-base-r-and-rstudio.html#why-do-we-need-both-base-r-and-rstudio"><i class="fa fa-check"></i><strong>2.1 Why Do We Need Both Base R and RStudio?</strong></a></li>
+<li class="chapter" data-level="" data-path="installation-of-base-r-and-rstudio.html"><a href="installation-of-base-r-and-rstudio.html#steps-to-install-base-r-and-rstudio"><i class="fa fa-check"></i><strong>2.2 Steps to Install Base R and RStudio</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html"><i class="fa fa-check"></i><strong>3. Exploring R Basics</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#introduction-to-rstudio-interface"><i class="fa fa-check"></i><strong>3.1 Introduction to RStudio Interface</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#console-bottom-left"><i class="fa fa-check"></i><strong>3.1.1 Console (Bottom Left)</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#script-editor-top-left"><i class="fa fa-check"></i><strong>3.1.2 Script Editor (Top Left)</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#environmenthistory-top-right"><i class="fa fa-check"></i><strong>3.1.3 Environment/History (Top Right)</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#plotspackageshelpviewer-bottom-right"><i class="fa fa-check"></i><strong>3.1.4 Plots/Packages/Help/Viewer (Bottom Right)</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#start-our-initial-exploration-in-r"><i class="fa fa-check"></i><strong>3.2 Start our initial exploration in R</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#variables-and-variable-assignment"><i class="fa fa-check"></i><strong>3.3 Variables and Variable Assignment</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#functions-in-r"><i class="fa fa-check"></i><strong>3.3 Functions in R</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#packages-extending-the-power-of-r"><i class="fa fa-check"></i><strong>3.4 Packages: Extending the Power of R</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#setting-up-working-directory"><i class="fa fa-check"></i><strong>3.5 Setting up Working Directory</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#home-directory"><i class="fa fa-check"></i><strong>1. Home Directory</strong>:</a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#working-directory"><i class="fa fa-check"></i><strong>2. Working Directory</strong>:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#types-of-variables"><i class="fa fa-check"></i><strong>3.6 Types of Variables</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#numeric"><i class="fa fa-check"></i><strong>1. Numeric</strong>:</a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#character"><i class="fa fa-check"></i><strong>2. Character</strong>:</a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#logical"><i class="fa fa-check"></i><strong>3. Logical</strong>:</a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#factor"><i class="fa fa-check"></i><strong>4. Factor</strong>:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#data-structure-in-r"><i class="fa fa-check"></i><strong>3.7 Data Structure in R</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#vector"><i class="fa fa-check"></i><strong>1. Vector</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#dataframe"><i class="fa fa-check"></i><strong>2. Dataframe</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#list"><i class="fa fa-check"></i><strong>3. List</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#understanding-dataframes"><i class="fa fa-check"></i><strong>3.7 Understanding Dataframes</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#understanding-dataframes-rows-vs.-columns"><i class="fa fa-check"></i><strong>Understanding dataframes: Rows vs. Columns</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#rows-the-individualist-view-on-all-characteristics"><i class="fa fa-check"></i><strong>Rows: the Individualist View on All Characteristics</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#columns-the-collective-view-of-each-characteristic"><i class="fa fa-check"></i><strong>Columns: the Collective View of Each Characteristic</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#takeaway-1"><i class="fa fa-check"></i><strong>Takeaway</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#exercise-working-with-dataframes"><i class="fa fa-check"></i><strong>Exercise: Working with Dataframes</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#important-note-on-dataframes"><i class="fa fa-check"></i><strong>Important Note on Dataframes</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#avoiding-confusion-variables-in-dataframes-vs.-variables-in-basic-r"><i class="fa fa-check"></i><strong>Avoiding Confusion: Variables in Dataframes vs. Variables in Basic R</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><strong>4. Glossary</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#interfaces"><i class="fa fa-check"></i><strong>Interfaces</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#r-programming-basics"><i class="fa fa-check"></i><strong>R Programming Basics</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#directories"><i class="fa fa-check"></i><strong>Directories</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#data-types"><i class="fa fa-check"></i><strong>Data Types</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#data-structures"><i class="fa fa-check"></i><strong>Data Structures</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#dataframe-terminology"><i class="fa fa-check"></i><strong>Dataframe Terminology</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#operators"><i class="fa fa-check"></i><strong>Operators</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#exercise"><i class="fa fa-check"></i><strong>Exercise</strong></a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R Programing</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exploring-r-basics" class="section level1 hasAnchor">
+<h1><strong>3. Exploring R Basics</strong><a href="exploring-r-basics.html#exploring-r-basics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<div id="introduction-to-rstudio-interface" class="section level2 hasAnchor">
+<h2><strong>3.1 Introduction to RStudio Interface</strong><a href="exploring-r-basics.html#introduction-to-rstudio-interface" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>RStudio is a powerful and user-friendly interface for working with R. It
+simplifies coding and data analysis with its organized layout and handy
+tools. Here’s a quick tour of the four main panels you’ll use:
+<strong>Console</strong>, <strong>Script Editor</strong>, <strong>Environment/History</strong>,
+<strong>Plots/Packages/Help/Viewer</strong>.</p>
+<p><br> <img src="RStudioInterface.png" /></p>
+<p><br></p>
+<hr />
+<div id="console-bottom-left" class="section level3 hasAnchor">
+<h3><strong>3.1.1 Console (Bottom Left)</strong><a href="exploring-r-basics.html#console-bottom-left" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Purpose:</strong> This is where you interact with R directly. You can
+type commands, press Enter, and see the results immediately.</li>
+<li><strong>Key Features:</strong>
+<ul>
+<li>The Console only allows <strong>line-by-line execution</strong>. This means
+you can type a single command, run it, and see the output right
+away. For longer scripts or multiple lines of code, you’ll need
+the Script Editor.</li>
+<li>Previous commands can be accessed using the up arrow key, so you
+don’t have to retype them.</li>
+<li>Error messages and warnings are displayed here, helping you
+debug your code.</li>
+</ul></li>
+<li><strong>Example:</strong> Type <code>2 + 2</code> and press Enter. You’ll see:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="exploring-r-basics.html#cb1-1" tabindex="-1"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">2</span></span></code></pre></div>
+<pre><code>[1] 4</code></pre>
+<hr />
+</div>
+<div id="script-editor-top-left" class="section level3 hasAnchor">
+<h3><strong>3.1.2 Script Editor (Top Left)</strong><a href="exploring-r-basics.html#script-editor-top-left" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Purpose:</strong> A space for writing and saving longer pieces of code,
+called scripts.</li>
+<li><strong>Key Features:</strong>
+<ul>
+<li>Write multiple lines of code.</li>
+<li>Save your script for future use (File &gt; Save as <code>.R</code> file).</li>
+<li>Run lines of code by selecting them and pressing <code>Ctrl + Enter</code>
+(Windows) or <code>Cmd + Enter</code> (Mac).</li>
+</ul></li>
+<li><strong>Example:</strong>
+<ul>
+<li>Go to <strong>File &gt; New File &gt; R Script</strong> to open a new script
+file.</li>
+<li>Type the following code in the Script:</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="exploring-r-basics.html#cb3-1" tabindex="-1"></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span></code></pre></div>
+<ul>
+<li>Highlight the line, then press <code>Ctrl + Enter</code> (Windows) or
+<code>Cmd + Enter</code> (Mac) to run it.</li>
+<li>The result will appear in the Console:</li>
+</ul>
+<pre><code>[1] 4</code></pre>
+<ul>
+<li>If you want to save your <code>2 + 2</code> work for future use, save the
+script using <strong>File &gt; Save As</strong>, which will save it as a <code>.R</code> file
+that you can reopen later.</li>
+</ul>
+<hr />
+</div>
+<div id="environmenthistory-top-right" class="section level3 hasAnchor">
+<h3><strong>3.1.3 Environment/History (Top Right)</strong><a href="exploring-r-basics.html#environmenthistory-top-right" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Environment Tab</strong>:
+<ul>
+<li><strong>Purpose:</strong> Shows all the variables, datasets, and objects
+you’ve created.</li>
+<li><strong>Example</strong>: If you create the following in the Console or
+Script Editor:</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="exploring-r-basics.html#cb5-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span></code></pre></div>
+<p>You’ll see <code>x</code> listed in the Environment tab with its value
+<code>4</code>.</p>
+<ul>
+<li><strong>History Tab</strong>:
+<ul>
+<li>Keeps a record of all commands you’ve run in the Console.</li>
+<li>You can click on any command in the history to re-run or copy
+it.</li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="plotspackageshelpviewer-bottom-right" class="section level3 hasAnchor">
+<h3><strong>3.1.4 Plots/Packages/Help/Viewer (Bottom Right)</strong><a href="exploring-r-basics.html#plotspackageshelpviewer-bottom-right" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<hr />
+<ul>
+<li><strong>Plots Tab</strong>:
+<ul>
+<li><strong>Purpose:</strong> Displays graphs and visualizations generated by
+your code.</li>
+<li><strong>Example:</strong> Create a simple plot:</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="exploring-r-basics.html#cb6-1" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span></code></pre></div>
+<p><img src="Section4_3_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>The graph will appear in the Plots tab.</p>
+<p><br>
+<strong>Note</strong>: If you are working in an <strong>R Markdown</strong> or <strong>R
+Notebook</strong> instead of an <strong>R Script</strong>, the graph will appear directly in
+the document output instead of the Plots tab.</p>
+<hr />
+<ul>
+<li><strong>Packages Tab</strong>:
+<ul>
+<li><strong>Purpose:</strong> Manage R packages (install, update, and load them).</li>
+<li><strong>Example:</strong> Install and load the <code>ggplot2</code> package by running
+this code:</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="exploring-r-basics.html#cb7-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>) <span class="co">#installing the package</span></span>
+<span id="cb7-2"><a href="exploring-r-basics.html#cb7-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co">#loading the package</span></span></code></pre></div>
+<p>You should see <code>ggplot2</code> appear in the Packages tab with a checkmark indicating that it is loaded.</p>
+<hr />
+<strong>Question</strong>: What’s the purpose of <code>#</code> the above code?
+<details>
+<summary>
+Click here for the answer
+</summary>
+In R, the <code>#</code> symbol is used to <strong>add comments</strong> to your code. Comments are lines of text that <strong>R ignores when running the code</strong>. They’re incredibly useful for <strong>explaining</strong> what your code does or for <strong>leaving notes to yourself or others who may read your script</strong>.
+</details>
+<hr />
+<ul>
+<li><strong>Help Tab</strong>:
+<ul>
+<li><strong>Purpose:</strong> Access documentation and help files for R
+functions.</li>
+<li><strong>Importance:</strong> The Help Tab is your go-to resource for
+understanding how R functions work. It provides detailed
+explanations, examples, and descriptions of arguments.
+<ul>
+<li>You should always check the documentation when you’re unsure
+about a function or need clarification on how to use it.<br />
+</li>
+<li>This habit will save you time and help you write more
+accurate and efficient code.</li>
+</ul></li>
+<li><strong>Example:</strong> Search for help on the <code>mean</code> function by typing <code>?</code> in front of a function name:</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="exploring-r-basics.html#cb8-1" tabindex="-1"></a>?mean</span></code></pre></div>
+<p><br> <img src="RHelp.png" alt="Help Tab" /></p>
+<hr />
+<ul>
+<li><strong>What to Look For in the Help Tab Output:</strong>
+<ul>
+<li><strong>Description</strong>: A brief summary of what the function does
+(e.g., <code>mean</code> calculates the arithmetic mean).<br />
+</li>
+<li><strong>Usage</strong>: Shows how to write the function and the required
+inputs (e.g., <code>mean(x, trim = 0, na.rm = FALSE)</code>).<br />
+</li>
+<li><strong>Arguments</strong>: Describes each input:
+<ul>
+<li><code>x</code>: The data to compute the mean from.</li>
+<li><code>trim</code>: The fraction of data to exclude from each end
+(default is <code>0</code> if not specified).</li>
+<li><code>na.rm</code>: Whether to remove <code>NA</code> values before calculation
+(default is <code>FALSE</code> if not specified).</li>
+</ul></li>
+<li><strong>Default Arguments</strong>: Defaults save you time by providing
+pre-set values for arguments. For example:
+<ul>
+<li>If you don’t specify <code>trim</code>, it assumes <code>0</code>.</li>
+<li>If you don’t specify <code>na.rm</code>, it assumes <code>FALSE</code>. You only
+need to include these arguments if you want to override the
+defaults.</li>
+</ul></li>
+<li><strong>Value</strong>: Explains the output of the function<br />
+</li>
+<li><strong>Examples</strong>: Examples of code snippets to see the function in
+action</li>
+</ul></li>
+<li><strong>Pro Tip:</strong> Always check the <strong>Arguments</strong> section to understand
+the defaults, and look at the <strong>Examples</strong> section to see how the
+function is typically used.</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Viewer Tab</strong>:
+<ul>
+<li><strong>Purpose:</strong> View web-based outputs, such as interactive graphs
+or HTML reports.</li>
+</ul></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="start-our-initial-exploration-in-r" class="section level2 hasAnchor">
+<h2><strong>3.2 Start our initial exploration in R</strong><a href="exploring-r-basics.html#start-our-initial-exploration-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+<p><strong>Excercise</strong></p>
+<p><strong>1. Find the square root of 1024 using R.</strong> <em>Hint: Use the sqrt()
+function</em></p>
+<p><strong>2. What happens when you run the following code?</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="exploring-r-basics.html#cb9-1" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;Hello, World!&quot;</span>)</span></code></pre></div>
+<details>
+<summary>
+Click for Answer
+</summary>
+<pre><code>[1] &quot;Hello, World!&quot;</code></pre>
+</details>
+<p><strong>3. Consider the following code:</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="exploring-r-basics.html#cb11-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">42</span></span>
+<span id="cb11-2"><a href="exploring-r-basics.html#cb11-2" tabindex="-1"></a>x</span>
+<span id="cb11-3"><a href="exploring-r-basics.html#cb11-3" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">43</span></span>
+<span id="cb11-4"><a href="exploring-r-basics.html#cb11-4" tabindex="-1"></a>x</span></code></pre></div>
+<p><em>Question: What is the value of x after the last line?</em></p>
+<details>
+<summary>
+Click for Answer
+</summary>
+<pre><code>[1] 43</code></pre>
+</details>
+<p><strong>4. Consider the following code:</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="exploring-r-basics.html#cb13-1" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb13-2"><a href="exploring-r-basics.html#cb13-2" tabindex="-1"></a>z <span class="ot">&lt;-</span> x <span class="sc">+</span> y</span>
+<span id="cb13-3"><a href="exploring-r-basics.html#cb13-3" tabindex="-1"></a>z</span></code></pre></div>
+<p><em>Question: What is the value of z?</em></p>
+<p><em>Challenge: Change the value of y to 20 and recalculate z. What happens
+to z?</em></p>
+<details>
+<summary>
+Click for Answer
+</summary>
+<pre><code>[1] 53</code></pre>
+<p>The value of z will be <code>63</code> after changing the value of y to <code>20</code>.</p>
+</details>
+<p><strong>5. What happens if you try assigning a value to a variable using <code>=</code> instead of <code>&lt;-</code>?</strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="exploring-r-basics.html#cb15-1" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">10</span></span>
+<span id="cb15-2"><a href="exploring-r-basics.html#cb15-2" tabindex="-1"></a>x</span></code></pre></div>
+<details>
+<summary>
+Click for Answer
+</summary>
+<p>In R, both <code>=</code> and <code>&lt;-</code> can be used for variable assignment. However, <code>&lt;-</code> is <strong>preferred in R</strong> because:</p>
+<ul>
+<li>It’s the standard syntax used in most R code, making it easier to
+read and consistent across scripts.</li>
+<li>It avoids confusion with <code>=</code> used in function arguments.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="exploring-r-basics.html#cb16-1" tabindex="-1"></a><span class="co"># Using `=` for variable assignment:</span></span>
+<span id="cb16-2"><a href="exploring-r-basics.html#cb16-2" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">10</span>  </span>
+<span id="cb16-3"><a href="exploring-r-basics.html#cb16-3" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="exploring-r-basics.html#cb18-1" tabindex="-1"></a><span class="co"># Using `=` inside a function argument:</span></span>
+<span id="cb18-2"><a href="exploring-r-basics.html#cb18-2" tabindex="-1"></a><span class="fu">mean</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))  <span class="co"># `x` is a parameter that we will pass a value (known as an argument) to to the mean function. X here is not a variable.</span></span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<p><em>What’s the difference between what we did to x here?</em></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="exploring-r-basics.html#cb20-1" tabindex="-1"></a><span class="co"># Preferred approach to avoid confusion:</span></span>
+<span id="cb20-2"><a href="exploring-r-basics.html#cb20-2" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span>  <span class="co"># Assign 10 to variable x</span></span>
+<span id="cb20-3"><a href="exploring-r-basics.html#cb20-3" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="exploring-r-basics.html#cb22-1" tabindex="-1"></a><span class="fu">mean</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))  <span class="co"># Use x as input for the mean function</span></span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+We will learn more about the distinction later once we cover the concepts of variables and functions.
+</details>
+<hr />
+</div>
+<div id="variables-and-variable-assignment" class="section level2 hasAnchor">
+<h2><strong>3.3 Variables and Variable Assignment</strong><a href="exploring-r-basics.html#variables-and-variable-assignment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>What is a variable?</strong></p>
+<ul>
+<li>A variable in R is a container that stores a value (e.g., a number, text, or dataset) for future use.</li>
+<li>Think of it as a labeled box where you can put things and retrieve them later.</li>
+</ul>
+<hr />
+<p><strong>How to assign a value to a variable</strong></p>
+<p>In R, you assign a value to a variable using <code>&lt;-</code> (preferred).</p>
+<p><strong>Examples:</strong></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="exploring-r-basics.html#cb24-1" tabindex="-1"></a><span class="co"># Assigning values using `&lt;-`</span></span>
+<span id="cb24-2"><a href="exploring-r-basics.html#cb24-2" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb24-3"><a href="exploring-r-basics.html#cb24-3" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="st">&quot;Hello, R&quot;</span></span></code></pre></div>
+<p>Now you can retrieve the stored values later.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="exploring-r-basics.html#cb25-1" tabindex="-1"></a><span class="co"># Assigning values using `&lt;-`</span></span>
+<span id="cb25-2"><a href="exploring-r-basics.html#cb25-2" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="exploring-r-basics.html#cb27-1" tabindex="-1"></a><span class="fu">print</span>(y)</span></code></pre></div>
+<pre><code>## [1] &quot;Hello, R&quot;</code></pre>
+<p><strong>Variable naming Rules</strong></p>
+<ul>
+<li><strong>Can contain</strong>: Letters, numbers, underscores (_), and dots (.).</li>
+<li><strong>Must start with</strong>: A letter or a dot (not followed by a number).</li>
+<li><strong>Cannot contain</strong>: Spaces or special characters (@, #, etc.).</li>
+<li><strong>Case-sensitive</strong>: myVar and MyVar are different variables.</li>
+</ul>
+<p><strong>Quiz: Is it a valid variable name in R?</strong></p>
+<p>For each example below, determine whether it’s a valid variable name in R. Write down <strong>Yes</strong> or <strong>No</strong> for each.</p>
+<ol style="list-style-type: decimal">
+<li><code>my_var</code><br />
+</li>
+<li><code>2cool</code><br />
+</li>
+<li><code>.hiddenValue</code><br />
+</li>
+<li><code>total.sales</code><br />
+</li>
+<li><code>hello world</code><br />
+</li>
+<li><code>data#123</code><br />
+</li>
+<li><code>_underscore</code><br />
+</li>
+<li><code>abc_123</code><br />
+</li>
+<li><code>.1startingWithDot</code><br />
+</li>
+<li><code>CaseSensitive</code> vs <code>casesensitive</code></li>
+</ol>
+<hr />
+<details>
+<summary>
+Click here for the answers
+</summary>
+<p><strong>Key: valid variable names</strong></p>
+<ol style="list-style-type: decimal">
+<li><code>my_var</code> → <strong>Yes</strong><br />
+</li>
+<li><code>2cool</code> → <strong>No</strong> (Starts with a number)<br />
+</li>
+<li><code>.hiddenValue</code> → <strong>Yes</strong><br />
+</li>
+<li><code>total.sales</code> → <strong>Yes</strong><br />
+</li>
+<li><code>hello world</code> → <strong>No</strong> (Contains a space)<br />
+</li>
+<li><code>data#123</code> → <strong>No</strong> (Contains a special character <code>#</code>)<br />
+</li>
+<li><code>_underscore</code> → <strong>No</strong> (Cannot start with an underscore)<br />
+</li>
+<li><code>abc_123</code> → <strong>Yes</strong><br />
+</li>
+<li><code>.1startingWithDot</code> → <strong>No</strong> (Dot followed by a number)<br />
+</li>
+<li><code>CaseSensitive</code> vs <code>casesensitive</code> → <strong>Both are valid but different variables</strong> (Case-sensitive).</li>
+</ol>
+</details>
+<hr />
+<p><strong>Exercise</strong></p>
+<p>Copy and paste the following code into your R Script, run it, and answer the questions.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="exploring-r-basics.html#cb29-1" tabindex="-1"></a><span class="co"># Assign values to variables</span></span>
+<span id="cb29-2"><a href="exploring-r-basics.html#cb29-2" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb29-3"><a href="exploring-r-basics.html#cb29-3" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb29-4"><a href="exploring-r-basics.html#cb29-4" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="exploring-r-basics.html#cb29-5" tabindex="-1"></a><span class="co"># Perform operations with variables</span></span>
+<span id="cb29-6"><a href="exploring-r-basics.html#cb29-6" tabindex="-1"></a>c <span class="ot">&lt;-</span> a <span class="sc">+</span> b</span>
+<span id="cb29-7"><a href="exploring-r-basics.html#cb29-7" tabindex="-1"></a>c</span>
+<span id="cb29-8"><a href="exploring-r-basics.html#cb29-8" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="exploring-r-basics.html#cb29-9" tabindex="-1"></a><span class="co"># Modify a variable</span></span>
+<span id="cb29-10"><a href="exploring-r-basics.html#cb29-10" tabindex="-1"></a>a <span class="ot">&lt;-</span> a <span class="sc">*</span> <span class="dv">2</span></span>
+<span id="cb29-11"><a href="exploring-r-basics.html#cb29-11" tabindex="-1"></a>a</span></code></pre></div>
+<p><strong>Questions</strong>:</p>
+<ul>
+<li>What is the value of <code>c</code>?</li>
+<li>What happens to <code>a</code> after you modify it?</li>
+<li>Can you create a variable named 1a? Why or why not?</li>
+</ul>
+<hr />
+<p><strong>Pro Tip: Use descriptive variable names</strong></p>
+<p>Choose meaningful names for variables to make your code easier to understand.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="exploring-r-basics.html#cb30-1" tabindex="-1"></a>total_sales <span class="ot">&lt;-</span> <span class="dv">1000</span>  <span class="co"># Clear and descriptive</span></span>
+<span id="cb30-2"><a href="exploring-r-basics.html#cb30-2" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1000</span>            <span class="co"># Ambiguous</span></span></code></pre></div>
+<hr />
+</div>
+<div id="functions-in-r" class="section level2 hasAnchor">
+<h2><strong>3.3 Functions in R</strong><a href="exploring-r-basics.html#functions-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+<p><strong>What’s a function?</strong></p>
+<p>A <strong>function</strong> in R is a block of code that performs a specific task. Functions help you reuse code and simplify your work by performing complex operations with just a single line.</p>
+<hr />
+<p><strong>Why use functions?</strong></p>
+<ul>
+<li><strong>Efficiency</strong>: Avoid rewriting code for repetitive tasks.</li>
+<li><strong>Clarity</strong>: Make your code easier to read and understand.</li>
+<li><strong>Modularity</strong>: Break your work into smaller, reusable pieces.</li>
+</ul>
+<hr />
+<p><strong>How functions work</strong></p>
+<p>Functions take inputs (called <strong>arguments</strong>) and return outputs. These inputs are specified in the function as <strong>parameters</strong>, which act as placeholders for the values you provide. When calling a function, you match <strong>parameters</strong> to <strong>arguments</strong>.</p>
+<hr />
+<p><strong>Structure of a function</strong></p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="exploring-r-basics.html#cb31-1" tabindex="-1"></a><span class="fu">function_name</span>(<span class="at">parameter =</span> argument)</span></code></pre></div>
+<hr />
+<p><strong>Examples of built-in functions that come with base R</strong></p>
+<ul>
+<li><em>Math functions</em></li>
+</ul>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="exploring-r-basics.html#cb32-1" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">16</span>)       <span class="co"># Square root of 16</span></span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="exploring-r-basics.html#cb34-1" tabindex="-1"></a><span class="fu">log</span>(<span class="dv">100</span>, <span class="dv">10</span>)   <span class="co"># Logarithm base 10 of 100</span></span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<ul>
+<li><em>Statistical functions</em></li>
+</ul>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="exploring-r-basics.html#cb36-1" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>))  <span class="co"># Average of numbers</span></span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="exploring-r-basics.html#cb38-1" tabindex="-1"></a><span class="fu">sum</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)               <span class="co"># Sum of numbers 1 to 10</span></span></code></pre></div>
+<pre><code>## [1] 55</code></pre>
+<ul>
+<li><em>String functions</em></li>
+</ul>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="exploring-r-basics.html#cb40-1" tabindex="-1"></a><span class="fu">tolower</span>(<span class="st">&quot;HELLO&quot;</span>)  <span class="co"># Convert to lowercase</span></span></code></pre></div>
+<pre><code>## [1] &quot;hello&quot;</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="exploring-r-basics.html#cb42-1" tabindex="-1"></a><span class="fu">toupper</span>(<span class="st">&quot;hello&quot;</span>)  <span class="co"># Convert to uppercase</span></span></code></pre></div>
+<pre><code>## [1] &quot;HELLO&quot;</code></pre>
+<hr />
+<p><strong>Creating your own function</strong></p>
+<p>You can define your own function in R using the function keyword. <strong><em>NOTE THE SPECIFIC CODE STRUCTURE</em></strong></p>
+<p><em>Structure of a function creation</em></p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="exploring-r-basics.html#cb44-1" tabindex="-1"></a>function_name <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y, ...) {</span>
+<span id="cb44-2"><a href="exploring-r-basics.html#cb44-2" tabindex="-1"></a>  Steps of things you want to do with the inputs x, y, ...</span>
+<span id="cb44-3"><a href="exploring-r-basics.html#cb44-3" tabindex="-1"></a>}</span></code></pre></div>
+<p><em>Example</em></p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="exploring-r-basics.html#cb45-1" tabindex="-1"></a><span class="co"># Define a function to calculate the square of a number</span></span>
+<span id="cb45-2"><a href="exploring-r-basics.html#cb45-2" tabindex="-1"></a>square <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb45-3"><a href="exploring-r-basics.html#cb45-3" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb45-4"><a href="exploring-r-basics.html#cb45-4" tabindex="-1"></a>}</span></code></pre></div>
+<p>In the above code, we create a function called <code>square()</code>, which takes an <strong>argument</strong> assigned to a <strong>parameter</strong> <code>x</code>. When the function is called, the action specified in <code>{}</code> is performed using the provided argument.</p>
+<p><em>Calling the function</em></p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="exploring-r-basics.html#cb46-1" tabindex="-1"></a><span class="co"># Use the function</span></span>
+<span id="cb46-2"><a href="exploring-r-basics.html#cb46-2" tabindex="-1"></a><span class="fu">square</span>(<span class="dv">5</span>)  <span class="co"># Output: 25</span></span></code></pre></div>
+<pre><code>## [1] 25</code></pre>
+<p>Here:</p>
+<ul>
+<li><code>5</code> is the argument passed to <code>x</code> when the function is called.</li>
+<li>The result of <code>x^2</code> is returned as the output.</li>
+</ul>
+<hr />
+</div>
+<div id="packages-extending-the-power-of-r" class="section level2 hasAnchor">
+<h2><strong>3.4 Packages: Extending the Power of R</strong><a href="exploring-r-basics.html#packages-extending-the-power-of-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+<p><strong>What is a package?</strong></p>
+<p>Normally, for beginners, we don’t frequently have to write our own functions. Instead, we can use functions that others have already created and shared through packages, saving our time and effort.</p>
+<p>A <strong>package</strong> is a collection of R functions, datasets, and documentation bundled together for a specific purpose. Think of it as an “add-on” that provides tools tailored to your needs.</p>
+<hr />
+<p><strong>Why use packages?</strong></p>
+<ul>
+<li>Packages let you use functions that aren’t built into base R.<br />
+</li>
+<li>They save time by providing pre-written code for common tasks.<br />
+</li>
+<li>They’re widely used for tasks like plotting (<code>ggplot2</code>), data manipulation (<code>dplyr</code>), or bioinformatics (<code>Bioconductor</code> packages).</li>
+</ul>
+<hr />
+<p><strong>Installing and loading packages</strong></p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Install a package</strong></p>
+<ul>
+<li>Use the <code>install.packages()</code> function to download and install a package.</li>
+<li><strong>Note</strong>: Package names go inside quotes (<code>""</code>) when using <code>install.packages()</code>.</li>
+<li>Not all packages can be installed this way and may require alternative installation methods. Check the documentation for that specific package if you encounter issues during installation by simply google it.</li>
+<li>Example:</li>
+</ul></li>
+</ol>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="exploring-r-basics.html#cb48-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)  <span class="co"># Install a package called dplyr. Note the quotation.</span></span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li><p><strong>Load a package</strong></p>
+<ul>
+<li>Use the <code>library()</code> function to load a package into your R session. This is like open the software you’d like to use here.</li>
+<li><strong>Note</strong>: Package names do NOT need quotes when using <code>library()</code>.</li>
+<li>Example:</li>
+</ul></li>
+</ol>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="exploring-r-basics.html#cb49-1" tabindex="-1"></a><span class="fu">library</span>(dplyr)  <span class="co"># Load the package dplyr. No quotation here.</span></span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li><p><strong>Check Installed Packages</strong></p>
+<ul>
+<li>See all installed packages in the <strong>Packages Tab</strong> (Bottom Right of RStudio).<br />
+</li>
+<li>Use <code>installed.packages()</code> in the console to list them:</li>
+</ul></li>
+</ol>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="exploring-r-basics.html#cb50-1" tabindex="-1"></a><span class="fu">installed.packages</span>()</span></code></pre></div>
+<hr />
+<p><strong>Starting with <code>library()</code> in R Scripts</strong></p>
+<p>Typically, when you see an R Script shared by others, it will start with a section that loads all the necessary packages using <code>library()</code>. This ensures that all the tools needed for the script are available.</p>
+<ul>
+<li><strong>Why?</strong> If you’d like to replicate the script, you can simply copy and paste it, and everything should work as long as the required packages are installed.<br />
+</li>
+<li><strong>What if it doesn’t?</strong> If you encounter an error, it usually means the package isn’t installed. You just need to install it, often using <code>install.packages("package_name")</code>, and you’re good to go.<br />
+</li>
+<li><strong>Reminder:</strong> You only need to install a package once, but you must load it with <code>library()</code> every session.</li>
+</ul>
+<p><em>Example</em></p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="exploring-r-basics.html#cb51-1" tabindex="-1"></a><span class="co"># This is the beginning of a script. We will load required packages.</span></span>
+<span id="cb51-2"><a href="exploring-r-basics.html#cb51-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)  <span class="co"># For advanced plotting</span></span>
+<span id="cb51-3"><a href="exploring-r-basics.html#cb51-3" tabindex="-1"></a><span class="fu">library</span>(dplyr)    <span class="co"># For data manipulation</span></span>
+<span id="cb51-4"><a href="exploring-r-basics.html#cb51-4" tabindex="-1"></a><span class="fu">library</span>(tidyr)    <span class="co"># For tidying data</span></span>
+<span id="cb51-5"><a href="exploring-r-basics.html#cb51-5" tabindex="-1"></a><span class="fu">library</span>(readr)    <span class="co"># For reading CSV files</span></span>
+<span id="cb51-6"><a href="exploring-r-basics.html#cb51-6" tabindex="-1"></a></span>
+<span id="cb51-7"><a href="exploring-r-basics.html#cb51-7" tabindex="-1"></a><span class="co">#Now we can start getting our hands dirty!</span></span></code></pre></div>
+<p>Note that the above packages are parts of tidyverse. You can simply install and load the tidyverse package instead.</p>
+<p><img src="TidyversePackages.png" /></p>
+<p><em>Example</em></p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="exploring-r-basics.html#cb52-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<hr />
+</div>
+<div id="setting-up-working-directory" class="section level2 hasAnchor">
+<h2><strong>3.5 Setting up Working Directory</strong><a href="exploring-r-basics.html#setting-up-working-directory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+<p><strong>The challenges of command-line interfaces</strong></p>
+<p>When working with R, you’ll notice a big shift compared to how we usually interact with computers. In R programming, you’ll primarily use <strong>typed commands</strong> to perform actions, unlike the <strong>clicking and dragging</strong> you’re used to in <strong>Graphical User Interface (GUI)</strong>. This text-based interactive approach is known as a <strong>Command-Line Interface (CLI)</strong>.</p>
+<p>Imagine you’re writing a document in MS Word. You don’t need to think much about where your file is saved—you just click “Insert” to add an image from a gallery of icons and save the document wherever you like, often with just a few clicks. Later, you can simply drag and drop files around your desktop to organize them.</p>
+<p>In CLIs, things are more structured but less forgiving. You must be aware of <strong>where you are working</strong> because when you save a file, it’s saved in your <strong>current working directory</strong>. If you don’t specify where to save or open files, R assumes it should look in or save to this directory. If you aren’t mindful of this, errors like <code>File not found</code> or misplaced outputs can occur.</p>
+<p><br>
+<img src="GUIvsCLI.png" alt="GUI vs CLI" /></p>
+<p><br></p>
+<hr />
+<p><strong>What’s a directory?</strong></p>
+<p>For a beginner, you can assume a <strong>directory</strong> as simply a folder on your computer that holds files and subfolders. Directories help you organize your work and locate files easily. In R, directories are critical because they determine where your input files (like datasets) are read from and where output files (like results or plots) are saved.</p>
+<p>What’s different from what you’re used to is that, instead of navigating through your screen by clicking and dragging folder icons to access files, you’ll now access files by specifying <strong><em>a path</em></strong> through <strong>typing</strong>.</p>
+<p>For example, on Windows, if you want to access a file called <code>homework1.docx</code> in the <code>Documents</code> folder, you would specify its path as <code>C:/Users/YourName/Documents/homework1.docx</code>.</p>
+<hr />
+<p><strong>Types of directories</strong></p>
+<p>When working in R, directories play a crucial role in managing your files. Understanding the difference between <strong>Home Directory</strong> and <strong>Working Directory</strong> will help you avoid common pitfalls when reading or saving files.</p>
+<div id="home-directory" class="section level3 hasAnchor">
+<h3><strong>1. Home Directory</strong>:<a href="exploring-r-basics.html#home-directory" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>The starting point or default location on your computer.<br />
+</li>
+<li>Example: <code>C:/Users/YourName/Documents</code> (Windows) or <code>/Users/YourName</code> (Mac).<br />
+</li>
+<li>The home directory is often used as a reference point and can be accessed in R using the shortcut <code>~</code>, so you don’t need to type the whole path.<br />
+</li>
+<li><strong>Example</strong>: If your home directory is <code>C:/Users/YourName/Documents</code> (default for R on Windows), and you want to access a file called <code>homework1.docx</code>, instead of typing:</li>
+</ul>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="exploring-r-basics.html#cb53-1" tabindex="-1"></a><span class="st">&quot;C:/Users/YourName/Documents/homework1.docx&quot;</span></span></code></pre></div>
+<p>You can simply type:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="exploring-r-basics.html#cb54-1" tabindex="-1"></a><span class="st">&quot;~/homework1.docx&quot;</span></span></code></pre></div>
+<p>This makes navigating files faster and avoids lengthy path names.</p>
+<p><strong>Pro Tip</strong>: If you’re used to using <code>~</code> as a shortcut for switching languages (e.g., keyboard input), this might give you a headache when working in a Command-Line Interface (CLI). In R, <code>~</code> has a specific meaning as the home directory path.</p>
+</div>
+<div id="working-directory" class="section level3 hasAnchor">
+<h3><strong>2. Working Directory</strong>:<a href="exploring-r-basics.html#working-directory" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>The folder R is currently using to read or save files.<br />
+</li>
+<li>Think of it as the “active folder” for your current R session.<br />
+</li>
+<li>You can change the working directory as needed to organize files for a specific project. If not, your home directory will be your working directory.<br />
+</li>
+<li>Example:</li>
+</ul>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="exploring-r-basics.html#cb55-1" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Projects/MyAnalysis&quot;</span>)</span></code></pre></div>
+<ul>
+<li>It’s good practice to set up a unique working directory for each project to keep input files and outputs well-organized.</li>
+</ul>
+<hr />
+<p><strong>Setting up a working directory in R</strong></p>
+<p><strong>1. Check Your Current Directory</strong>:</p>
+<p>Use the <code>getwd()</code> function (<strong>“get working directory”</strong>) to check your current working directory:</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="exploring-r-basics.html#cb56-1" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<p><strong>2. Set a New Working Directory</strong>:</p>
+<p>Use the setwd() function (<strong>“set working directory”</strong>) to change the working directory to another specific folder you already have:</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="exploring-r-basics.html#cb57-1" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/MyProject&quot;</span>)</span></code></pre></div>
+<p>You can check if the working directory has change by running <code>getwd()</code> again.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="exploring-r-basics.html#cb58-1" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<hr />
+<p><strong>Exercise</strong>:</p>
+<p><strong>Create a folder called <code>SCSI180_Project</code> in your <code>Documents</code>. Then, make the folder <code>SCSI180_Project</code> your working directory.</strong></p>
+<hr />
+</div>
+</div>
+<div id="types-of-variables" class="section level2 hasAnchor">
+<h2><strong>3.6 Types of Variables</strong><a href="exploring-r-basics.html#types-of-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+<p>Now let’s go back to variables. As we learned previously, variables are containers for storing values. These values can take different forms, depending on the type of data being stored. Understanding these <strong>variable types</strong> is crucial because it determines how you can manipulate and use the data in calculations or functions.</p>
+<p><br></p>
+<p><strong>Common Variable Types in R</strong></p>
+<p><strong>1. Numeric: integer, double</strong></p>
+<p><strong>2. Character</strong></p>
+<p><strong>3. Logical</strong></p>
+<p><strong>4. Factor</strong></p>
+<p><br></p>
+<p>You can use these functions to check the type of a variable:</p>
+<ul>
+<li><strong><code>class()</code></strong>: Tells you the type of the variable.</li>
+<li><strong><code>typeof()</code></strong>: Provides a more technical description of the data type.</li>
+</ul>
+<hr />
+<div id="numeric" class="section level3 hasAnchor">
+<h3><strong>1. Numeric</strong>:<a href="exploring-r-basics.html#numeric" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>R stores numeric data as either <strong>integers</strong> or <strong>doubles</strong>.</p>
+<ul>
+<li><strong>Integer</strong>: Whole numbers without decimals.</li>
+</ul>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="exploring-r-basics.html#cb59-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span><span class="dt">L</span>  </span>
+<span id="cb59-2"><a href="exploring-r-basics.html#cb59-2" tabindex="-1"></a><span class="fu">typeof</span>(x) </span></code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><em>Appending an uppercase <code>L</code> to a numeric value is a way to explicitly make it an integer. Otherwise, it will be a double by default.</em></p>
+<ul>
+<li><strong>Double</strong>: Floating-point numbers (numbers with decimals). By default, R treats all numeric data as doubles unless specified as integers with appending <code>L</code>.</li>
+</ul>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="exploring-r-basics.html#cb61-1" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fl">3.14</span></span>
+<span id="cb61-2"><a href="exploring-r-basics.html#cb61-2" tabindex="-1"></a><span class="fu">typeof</span>(y)</span></code></pre></div>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<p><strong>Note</strong>: Unlike some programming languages, R does not have a separate “float” type.</p>
+<hr />
+</div>
+<div id="character" class="section level3 hasAnchor">
+<h3><strong>2. Character</strong>:<a href="exploring-r-basics.html#character" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Represents text, often referred to as <strong>strings</strong>, which are sequences of characters enclosed in quotes.</li>
+</ul>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="exploring-r-basics.html#cb63-1" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="st">&quot;Alice&quot;</span></span>
+<span id="cb63-2"><a href="exploring-r-basics.html#cb63-2" tabindex="-1"></a>greeting <span class="ot">&lt;-</span> <span class="st">&quot;Hello, World!&quot;</span></span>
+<span id="cb63-3"><a href="exploring-r-basics.html#cb63-3" tabindex="-1"></a>     </span>
+<span id="cb63-4"><a href="exploring-r-basics.html#cb63-4" tabindex="-1"></a><span class="fu">print</span>(name)</span></code></pre></div>
+<pre><code>## [1] &quot;Alice&quot;</code></pre>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="exploring-r-basics.html#cb65-1" tabindex="-1"></a><span class="fu">print</span>(greeting)</span></code></pre></div>
+<pre><code>## [1] &quot;Hello, World!&quot;</code></pre>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="exploring-r-basics.html#cb67-1" tabindex="-1"></a><span class="fu">typeof</span>(name)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p><strong>Pro Tip</strong>: Strings can use either single (<code>'</code>) or double (<code>"</code>) quotes, but they must match.</p>
+<hr />
+</div>
+<div id="logical" class="section level3 hasAnchor">
+<h3><strong>3. Logical</strong>:<a href="exploring-r-basics.html#logical" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Represents <code>TRUE</code> or <code>FALSE</code> values, often used in conditions or comparisons.</li>
+<li>Generally equivalent to what is commonly known as a <strong>boolean</strong> in other programming languages.</li>
+</ul>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="exploring-r-basics.html#cb69-1" tabindex="-1"></a>is_valid <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb69-2"><a href="exploring-r-basics.html#cb69-2" tabindex="-1"></a>is_greater <span class="ot">&lt;-</span> <span class="dv">5</span> <span class="sc">&gt;</span> <span class="dv">3</span></span>
+<span id="cb69-3"><a href="exploring-r-basics.html#cb69-3" tabindex="-1"></a></span>
+<span id="cb69-4"><a href="exploring-r-basics.html#cb69-4" tabindex="-1"></a><span class="fu">print</span>(is_valid)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="exploring-r-basics.html#cb71-1" tabindex="-1"></a><span class="fu">print</span>(is_greater)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="exploring-r-basics.html#cb73-1" tabindex="-1"></a><span class="fu">typeof</span>(is_greater)</span></code></pre></div>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<hr />
+<p><strong>Quiz</strong>:</p>
+<p><strong>3.1 Run the following code:</strong></p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="exploring-r-basics.html#cb75-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">5</span> <span class="sc">==</span> <span class="dv">8</span></span>
+<span id="cb75-2"><a href="exploring-r-basics.html#cb75-2" tabindex="-1"></a></span>
+<span id="cb75-3"><a href="exploring-r-basics.html#cb75-3" tabindex="-1"></a><span class="fu">typeof</span>(a)</span></code></pre></div>
+<ul>
+<li>What is the output of <code>typeof(a)</code>?</li>
+<li>What does <code>5 == 8</code> evaluate to?</li>
+</ul>
+<p><strong>3.2 What is the difference between <code>=</code> and <code>==</code> in R?</strong></p>
+<details>
+<summary>
+Click here for the answers
+</summary>
+<p><strong>3.1 Output of</strong> <code>typeof(a)</code>:</p>
+<p>The output is <code>"logical"</code>.</p>
+<p>Explanation: The comparison <code>5 == 8</code> evaluates to <code>FALSE</code> because 5 is not equal to 8. The variable <code>a</code> is assigned this logical value, and <code>typeof(a)</code> confirms its type as logical.</p>
+<p><strong>3.2 Difference Between <code>=</code> and <code>==</code></strong>:</p>
+<ul>
+<li><code>=</code> is used for <strong>variable assignment</strong>, similar to <code>&lt;-</code>, though it’s <strong>not the preferred</strong> method in R</li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="exploring-r-basics.html#cb76-1" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">10</span>  <span class="co"># Assigns 10 to x (not preferred)</span></span>
+<span id="cb76-2"><a href="exploring-r-basics.html#cb76-2" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span> <span class="co"># Assigns 10 to x (preferred)</span></span></code></pre></div>
+<ul>
+<li><code>=</code> is also used to <strong>specify arguments to parameters in functions</strong>.</li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="exploring-r-basics.html#cb77-1" tabindex="-1"></a><span class="fu">mean</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))  <span class="co"># Assigns the vector c(1, 2, 3) to the parameter x</span></span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<ul>
+<li><code>==</code> is used for <strong>comparison</strong>. It checks if two values are equal and returns a logical result (<code>TRUE</code> or <code>FALSE</code>).</li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="exploring-r-basics.html#cb79-1" tabindex="-1"></a><span class="dv">5</span> <span class="sc">==</span> <span class="dv">8</span>  <span class="co"># Returns FALSE</span></span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<p><strong>Key Takeaway</strong>:</p>
+<ul>
+<li>Use <code>==</code> for comparisons</li>
+<li>Use <code>&lt;-</code> (preferred) or <code>=</code> for variable assignments</li>
+<li>Use <code>=</code> when specifying arguments in function calls to avoid confusion</li>
+</ul>
+</details>
+<hr />
+</div>
+<div id="factor" class="section level3 hasAnchor">
+<h3><strong>4. Factor</strong>:<a href="exploring-r-basics.html#factor" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Represents <strong>categorical/discrete data</strong> with fixed levels, like a dropdown list with pre-defined options.</li>
+</ul>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="exploring-r-basics.html#cb81-1" tabindex="-1"></a>gender <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>))</span>
+<span id="cb81-2"><a href="exploring-r-basics.html#cb81-2" tabindex="-1"></a>gender</span></code></pre></div>
+<pre><code>## [1] Male   Female Male  
+## Levels: Female Male</code></pre>
+<p><strong>Why use factors?</strong> They ensure consistency in categorical data and are more memory efficient.</p>
+<hr />
+</div>
+</div>
+<div id="data-structure-in-r" class="section level2 hasAnchor">
+<h2><strong>3.7 Data Structure in R</strong><a href="exploring-r-basics.html#data-structure-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now that we’ve covered variable types, let’s explore how data is organized and stored in R. R provides various <strong>data structures</strong> to handle collections of data. The three most commonly used are:</p>
+<p><br>
+<strong>1. Vectors</strong></p>
+<p><strong>2. Dataframes</strong></p>
+<p><strong>3. Lists</strong></p>
+<hr />
+<div id="vector" class="section level3 hasAnchor">
+<h3><strong>1. Vector</strong><a href="exploring-r-basics.html#vector" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>A <strong>vector</strong> is a simple, one-dimensional collection of data, where all elements <strong>must be of the same type</strong> (e.g., numeric, character, logical).</li>
+<li>Think of it as a column of values in a spreadsheet.</li>
+<li>The <code>c()</code> function (short for “combine”) is used to create vectors in R by combining individual values into a single structure.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="exploring-r-basics.html#cb83-1" tabindex="-1"></a><span class="co"># Numeric vector</span></span>
+<span id="cb83-2"><a href="exploring-r-basics.html#cb83-2" tabindex="-1"></a>num_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb83-3"><a href="exploring-r-basics.html#cb83-3" tabindex="-1"></a></span>
+<span id="cb83-4"><a href="exploring-r-basics.html#cb83-4" tabindex="-1"></a><span class="co"># Character vector</span></span>
+<span id="cb83-5"><a href="exploring-r-basics.html#cb83-5" tabindex="-1"></a>char_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Apple&quot;</span>, <span class="st">&quot;Banana&quot;</span>, <span class="st">&quot;Cherry&quot;</span>)</span>
+<span id="cb83-6"><a href="exploring-r-basics.html#cb83-6" tabindex="-1"></a></span>
+<span id="cb83-7"><a href="exploring-r-basics.html#cb83-7" tabindex="-1"></a><span class="co"># Logical vector</span></span>
+<span id="cb83-8"><a href="exploring-r-basics.html#cb83-8" tabindex="-1"></a>log_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>)</span></code></pre></div>
+<p><strong>Question</strong>:</p>
+<p><em>What happen if you try to do this?</em></p>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="exploring-r-basics.html#cb84-1" tabindex="-1"></a>mixed_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="st">&quot;Apple&quot;</span>, <span class="cn">TRUE</span>)</span></code></pre></div>
+<details>
+<summary>
+Click here for the Answer
+</summary>
+<p>When you use <code>c()</code> to combine values of different types, R will automatically <strong>coerce them to the same type</strong>. In this case:</p>
+<p><code>1</code> (numeric) and <code>TRUE</code> (logical) will be converted to <strong>character</strong> to match <code>"Apple"</code>.</p>
+<p>Result:</p>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="exploring-r-basics.html#cb85-1" tabindex="-1"></a><span class="fu">print</span>(mixed_vec)</span></code></pre></div>
+<pre><code>## [1] &quot;1&quot;     &quot;Apple&quot; &quot;TRUE&quot;</code></pre>
+<p>Note that <code>1</code> and <code>TRUE</code> are now <code>"1"</code> and <code>"TRUE":</code> as strings/character.</p>
+</details>
+<hr />
+</div>
+<div id="dataframe" class="section level3 hasAnchor">
+<h3><strong>2. Dataframe</strong><a href="exploring-r-basics.html#dataframe" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A <strong>dataframe</strong> is a two-dimensional structure, like a table, where data is organized into rows and columns. Each <strong>column</strong> can store data of a single type (e.g., numeric, character, or logical), but <strong>different columns</strong> can store different types of data.</p>
+<p>Think of it as an Excel spreadsheet:</p>
+<ul>
+<li>Each <strong>column</strong> is like a variable that <strong>holds data of the same type</strong>.</li>
+<li>Each <strong>row</strong> is like an observation, representing one entry in the dataset.</li>
+</ul>
+<p>You also can think of a dataframe as <strong>a collection of vectors combined as columns</strong>:</p>
+<ul>
+<li>Each column is a vector.</li>
+<li>You combine multiple vectors (of the same length) to create a dataframe.</li>
+</ul>
+<p><br>
+<img src="VectorDF.png" /></p>
+<p><br>
+<strong>Example</strong>:</p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="exploring-r-basics.html#cb87-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb87-2"><a href="exploring-r-basics.html#cb87-2" tabindex="-1"></a>  <span class="at">Name =</span> <span class="fu">c</span>(<span class="st">&quot;Alice&quot;</span>, <span class="st">&quot;Bob&quot;</span>, <span class="st">&quot;Charlie&quot;</span>),  <span class="co"># Character vector</span></span>
+<span id="cb87-3"><a href="exploring-r-basics.html#cb87-3" tabindex="-1"></a>  <span class="at">Age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">35</span>),                 <span class="co"># Numeric vector</span></span>
+<span id="cb87-4"><a href="exploring-r-basics.html#cb87-4" tabindex="-1"></a>  <span class="at">Passed =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>)        <span class="co"># Logical vector</span></span>
+<span id="cb87-5"><a href="exploring-r-basics.html#cb87-5" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="exploring-r-basics.html#cb88-1" tabindex="-1"></a><span class="fu">print</span>(df)</span></code></pre></div>
+<pre><code>##      Name Age Passed
+## 1   Alice  25   TRUE
+## 2     Bob  30  FALSE
+## 3 Charlie  35   TRUE</code></pre>
+<p>You can extract a column (which is essentially a vector) from a dataframe using the <code>$</code> operator as <code>dataframe_name$column_name</code></p>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="exploring-r-basics.html#cb90-1" tabindex="-1"></a><span class="fu">print</span>(df<span class="sc">$</span>Name)</span></code></pre></div>
+<pre><code>## [1] &quot;Alice&quot;   &quot;Bob&quot;     &quot;Charlie&quot;</code></pre>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="exploring-r-basics.html#cb92-1" tabindex="-1"></a><span class="fu">typeof</span>(df<span class="sc">$</span>Name) <span class="co">#This should be a character vector</span></span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<hr />
+</div>
+<div id="list" class="section level3 hasAnchor">
+<h3><strong>3. List</strong><a href="exploring-r-basics.html#list" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A list is a flexible data structure that can store a collection of elements of different types, including vectors, data frames, and even other lists.
+Think of it as a box where each item can be completely different.</p>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="exploring-r-basics.html#cb94-1" tabindex="-1"></a><span class="co"># Create a list</span></span>
+<span id="cb94-2"><a href="exploring-r-basics.html#cb94-2" tabindex="-1"></a>my_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb94-3"><a href="exploring-r-basics.html#cb94-3" tabindex="-1"></a>  <span class="at">Name =</span> <span class="st">&quot;Alice&quot;</span>,</span>
+<span id="cb94-4"><a href="exploring-r-basics.html#cb94-4" tabindex="-1"></a>  <span class="at">Scores =</span> <span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">88</span>),</span>
+<span id="cb94-5"><a href="exploring-r-basics.html#cb94-5" tabindex="-1"></a>  <span class="at">Details =</span> <span class="fu">data.frame</span>(<span class="at">Subject =</span> <span class="fu">c</span>(<span class="st">&quot;Math&quot;</span>, <span class="st">&quot;Science&quot;</span>), <span class="at">Grade =</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>))</span>
+<span id="cb94-6"><a href="exploring-r-basics.html#cb94-6" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="exploring-r-basics.html#cb95-1" tabindex="-1"></a><span class="fu">print</span>(my_list)</span></code></pre></div>
+<pre><code>## $Name
+## [1] &quot;Alice&quot;
+## 
+## $Scores
+## [1] 90 85 88
+## 
+## $Details
+##   Subject Grade
+## 1    Math     A
+## 2 Science     B</code></pre>
+<hr />
+</div>
+</div>
+<div id="understanding-dataframes" class="section level2 hasAnchor">
+<h2><strong>3.7 Understanding Dataframes</strong><a href="exploring-r-basics.html#understanding-dataframes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Remember our previous discussion on the power of tabular data? Dataframes in R are a highly organized way to handle tabular data, following specific rules for structure and consistency.</p>
+<p>Let’s break down their design and focus on how rows and columns are arranged and utilized.</p>
+<hr />
+<div id="understanding-dataframes-rows-vs.-columns" class="section level3 hasAnchor">
+<h3><strong>Understanding dataframes: Rows vs. Columns</strong><a href="exploring-r-basics.html#understanding-dataframes-rows-vs.-columns" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Imagine you’re conducting a survey where each person fills out a form with information like their age, gender, occupation, and favorite color. Here’s how the data would look in a dataframe:</p>
+<p><strong>Rows</strong>:</p>
+<p>Each row represents one individual.</p>
+<ul>
+<li>Diana fills out the first row.</li>
+<li>David fills out the second row.</li>
+<li>And so on, with each row capturing data entry about one person.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Age</th>
+<th>Gender</th>
+<th>Occupation</th>
+<th>Favorite Color</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Diana</td>
+<td>25</td>
+<td>Female</td>
+<td>Engineer</td>
+<td>Blue</td>
+</tr>
+<tr class="even">
+<td>David</td>
+<td>30</td>
+<td>Male</td>
+<td>Teacher</td>
+<td>Green</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="rows-the-individualist-view-on-all-characteristics" class="section level3 hasAnchor">
+<h3><strong>Rows: the Individualist View on All Characteristics</strong><a href="exploring-r-basics.html#rows-the-individualist-view-on-all-characteristics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When you look at a single row, you’re seeing data about one individual. It’s like learning about a single person’s characteristics.</p>
+<p><strong>For example</strong>:</p>
+<ul>
+<li><strong>Row #1</strong>: Diana, 25, Female, Engineer, Blue. <strong><em>This is all about one person, Diana, with her all characteristics.</em></strong><br />
+</li>
+<li><strong>Row #2</strong>: David, 30, Male, Teacher, Green. <strong><em>Similarly, this is all about David.</em></strong></li>
+</ul>
+<p>This is an <strong>individualist view</strong>, but in data science, we’re rarely interested in just one person’s data. Instead, we look for patterns across the group.</p>
+<hr />
+</div>
+<div id="columns-the-collective-view-of-each-characteristic" class="section level3 hasAnchor">
+<h3><strong>Columns: the Collective View of Each Characteristic</strong><a href="exploring-r-basics.html#columns-the-collective-view-of-each-characteristic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In data science, the focus is typically on <strong>columns</strong> of a dataframe because:</p>
+<ul>
+<li>A column represents one characteristic (also known as <strong>variable</strong> or <strong>feature</strong>) across the entire group.</li>
+<li>Columns help us identify patterns and relationships.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<p>The <code>Favorite Color</code> column tells us the preferred colors of all surveyed people. By focusing on this column, you can answer questions like:</p>
+<ul>
+<li>“What is the most common favorite color?”</li>
+<li>“How does favorite color relate to occupation?”</li>
+</ul>
+<p>This <strong>column-centric thinking</strong> is at the heart of data analysis, allowing us to uncover trends and connections in the data.</p>
+<hr />
+</div>
+<div id="takeaway-1" class="section level3 hasAnchor">
+<h3><strong>Takeaway</strong><a href="exploring-r-basics.html#takeaway-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Columns are the backbone of how we think about dataframes in analysis. They help us uncover patterns and relationships within the data, providing insights into the group as a whole. Start with the columns, and let the data tell you the story of the group!</p>
+<hr />
+</div>
+<div id="exercise-working-with-dataframes" class="section level3 hasAnchor">
+<h3><strong>Exercise: Working with Dataframes</strong><a href="exploring-r-basics.html#exercise-working-with-dataframes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s practice creating and manipulating dataframes in R. <strong>Try to complete these tasks on your own first</strong>. Refer to the examples from the previous section if you need help.</p>
+<hr />
+<p><strong>Exercise</strong></p>
+<p><strong>1. Create a dataframe named <code>survey.1</code> using the following data</strong>:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Age</th>
+<th>Gender</th>
+<th>Occupation</th>
+<th>Favorite Color</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Diana</td>
+<td>25</td>
+<td>Female</td>
+<td>Engineer</td>
+<td>Blue</td>
+</tr>
+<tr class="even">
+<td>David</td>
+<td>30</td>
+<td>Male</td>
+<td>Teacher</td>
+<td>Green</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Create individual vectors for each column.</li>
+<li>Combine these vectors into a dataframe named <code>survey.1</code>.</li>
+</ul>
+<p><strong>2. Extract the <code>Occupation</code> column from <code>survey.1</code> and assign it to a new variable called <code>job</code></strong>.</p>
+<p><strong>3. Add a new column to <code>survey.1</code> for <code>Country</code> with the values <code>"USA"</code> and <code>"Canada"</code></strong>.</p>
+<hr />
+<details>
+<summary>
+Click here for the answers (only after trying the tasks yourself!)
+</summary>
+<p><strong>Answers</strong></p>
+<p><strong>1. Create a dataframe</strong>:</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="exploring-r-basics.html#cb97-1" tabindex="-1"></a><span class="co"># Create vectors</span></span>
+<span id="cb97-2"><a href="exploring-r-basics.html#cb97-2" tabindex="-1"></a>Name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Diana&quot;</span>, <span class="st">&quot;David&quot;</span>)</span>
+<span id="cb97-3"><a href="exploring-r-basics.html#cb97-3" tabindex="-1"></a>Age <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>)</span>
+<span id="cb97-4"><a href="exploring-r-basics.html#cb97-4" tabindex="-1"></a>Gender <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>)</span>
+<span id="cb97-5"><a href="exploring-r-basics.html#cb97-5" tabindex="-1"></a>Occupation <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Engineer&quot;</span>, <span class="st">&quot;Teacher&quot;</span>)</span>
+<span id="cb97-6"><a href="exploring-r-basics.html#cb97-6" tabindex="-1"></a>Favorite_Color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Blue&quot;</span>, <span class="st">&quot;Green&quot;</span>)</span>
+<span id="cb97-7"><a href="exploring-r-basics.html#cb97-7" tabindex="-1"></a></span>
+<span id="cb97-8"><a href="exploring-r-basics.html#cb97-8" tabindex="-1"></a><span class="co"># Combine vectors into a dataframe</span></span>
+<span id="cb97-9"><a href="exploring-r-basics.html#cb97-9" tabindex="-1"></a>survey<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(Name, Age, Gender, Occupation, Favorite_Color)</span>
+<span id="cb97-10"><a href="exploring-r-basics.html#cb97-10" tabindex="-1"></a></span>
+<span id="cb97-11"><a href="exploring-r-basics.html#cb97-11" tabindex="-1"></a><span class="co"># View the dataframe</span></span>
+<span id="cb97-12"><a href="exploring-r-basics.html#cb97-12" tabindex="-1"></a>survey<span class="fl">.1</span></span></code></pre></div>
+<pre><code>##    Name Age Gender Occupation Favorite_Color
+## 1 Diana  25 Female   Engineer           Blue
+## 2 David  30   Male    Teacher          Green</code></pre>
+<p><strong>2. Extract the occupation column</strong>:</p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="exploring-r-basics.html#cb99-1" tabindex="-1"></a><span class="co"># Extract the Occupation column</span></span>
+<span id="cb99-2"><a href="exploring-r-basics.html#cb99-2" tabindex="-1"></a>job <span class="ot">&lt;-</span> survey<span class="fl">.1</span><span class="sc">$</span>Occupation</span>
+<span id="cb99-3"><a href="exploring-r-basics.html#cb99-3" tabindex="-1"></a></span>
+<span id="cb99-4"><a href="exploring-r-basics.html#cb99-4" tabindex="-1"></a><span class="co"># View the result</span></span>
+<span id="cb99-5"><a href="exploring-r-basics.html#cb99-5" tabindex="-1"></a>job</span></code></pre></div>
+<pre><code>## [1] &quot;Engineer&quot; &quot;Teacher&quot;</code></pre>
+<p><strong>3. Add a new column</strong>:</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="exploring-r-basics.html#cb101-1" tabindex="-1"></a><span class="co"># Add a new column</span></span>
+<span id="cb101-2"><a href="exploring-r-basics.html#cb101-2" tabindex="-1"></a>survey<span class="fl">.1</span><span class="sc">$</span>Country <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;USA&quot;</span>, <span class="st">&quot;Canada&quot;</span>)</span>
+<span id="cb101-3"><a href="exploring-r-basics.html#cb101-3" tabindex="-1"></a></span>
+<span id="cb101-4"><a href="exploring-r-basics.html#cb101-4" tabindex="-1"></a><span class="co"># View the updated dataframe</span></span>
+<span id="cb101-5"><a href="exploring-r-basics.html#cb101-5" tabindex="-1"></a>survey<span class="fl">.1</span></span></code></pre></div>
+<pre><code>##    Name Age Gender Occupation Favorite_Color Country
+## 1 Diana  25 Female   Engineer           Blue     USA
+## 2 David  30   Male    Teacher          Green  Canada</code></pre>
+</details>
+<hr />
+</div>
+<div id="important-note-on-dataframes" class="section level3 hasAnchor">
+<h3><strong>Important Note on Dataframes</strong><a href="exploring-r-basics.html#important-note-on-dataframes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When working with dataframes, it’s essential to understand the terminology commonly used in data science:</p>
+<ul>
+<li>An <strong>individual</strong> or <strong>row</strong> is often referred to as an <strong>observation</strong>. Each observation represents one entry in your dataset, such as a person or an event.</li>
+<li>A <strong>column</strong> or <strong>characteristic</strong> is typically called a <strong>variable</strong> or <strong>feature</strong>. Each variable represents a specific attribute that is measured or recorded across all observations.</li>
+</ul>
+<hr />
+</div>
+<div id="avoiding-confusion-variables-in-dataframes-vs.-variables-in-basic-r" class="section level3 hasAnchor">
+<h3><strong>Avoiding Confusion: Variables in Dataframes vs. Variables in Basic R</strong><a href="exploring-r-basics.html#avoiding-confusion-variables-in-dataframes-vs.-variables-in-basic-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In data science, the term <strong>“variable”</strong> within a dataframe context refers to a <strong>column</strong> of data (e.g., age, gender, income). However, in basic R programming, a <strong>“variable”</strong> refers to a named object that stores a value or data structure (e.g., <code>x &lt;- 10</code>).</p>
+<p><strong>Example</strong>:</p>
+<ul>
+<li>In a dataframe, the column <code>Age</code> is called a <strong>variable</strong> because it represents a characteristic across all observations.</li>
+<li>In basic R, when you assign <code>Age &lt;- c(25, 30)</code>, <code>Age</code> is a <strong>variable</strong> in the programming context that stores a vector.</li>
+</ul>
+<p><strong>Key Takeaway</strong>:</p>
+<ul>
+<li>When working with dataframes, think of <strong>variables</strong> as <strong>columns</strong> that represent characteristics or features.</li>
+<li>In R programming generally, think of <strong>variables</strong> as containers that hold data.</li>
+<li><strong>Keep this distinction in mind to avoid confusion as you work with data!</strong></li>
+</ul>
+<hr />
+<p><a href="installation-of-base-r-and-rstudio.html">Previous: 2. Installation of Base R and RStudio</a> | <a href="index.html">Table of Contents</a> | <a href="glossary.html">Next: 4. Glossary</a></p>
+
+<hr />
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="installation-of-base-r-and-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="glossary.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

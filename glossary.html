@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4. Glossary | Introduction to R Programing</title>
+  <meta name="description" content="4. Glossary | Introduction to R Programing" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4. Glossary | Introduction to R Programing" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4. Glossary | Introduction to R Programing" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="exploring-r-basics.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Table of Contents</a></li>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html"><i class="fa fa-check"></i><strong>1. Why R Programming?</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html#whats-special-about-r"><i class="fa fa-check"></i><strong>1.1 What’s Special about R?</strong></a></li>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html#r-vs.-microsoft-excel"><i class="fa fa-check"></i><strong>1.2 R vs. Microsoft Excel</strong></a></li>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html#r-vs.-python"><i class="fa fa-check"></i><strong>1.3 R vs. Python</strong></a></li>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html#takeaway"><i class="fa fa-check"></i><strong>1.4 Takeaway</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="installation-of-base-r-and-rstudio.html"><a href="installation-of-base-r-and-rstudio.html"><i class="fa fa-check"></i><strong>2. Installation of Base R and RStudio</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="installation-of-base-r-and-rstudio.html"><a href="installation-of-base-r-and-rstudio.html#why-do-we-need-both-base-r-and-rstudio"><i class="fa fa-check"></i><strong>2.1 Why Do We Need Both Base R and RStudio?</strong></a></li>
+<li class="chapter" data-level="" data-path="installation-of-base-r-and-rstudio.html"><a href="installation-of-base-r-and-rstudio.html#steps-to-install-base-r-and-rstudio"><i class="fa fa-check"></i><strong>2.2 Steps to Install Base R and RStudio</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html"><i class="fa fa-check"></i><strong>3. Exploring R Basics</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#introduction-to-rstudio-interface"><i class="fa fa-check"></i><strong>3.1 Introduction to RStudio Interface</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#console-bottom-left"><i class="fa fa-check"></i><strong>3.1.1 Console (Bottom Left)</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#script-editor-top-left"><i class="fa fa-check"></i><strong>3.1.2 Script Editor (Top Left)</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#environmenthistory-top-right"><i class="fa fa-check"></i><strong>3.1.3 Environment/History (Top Right)</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#plotspackageshelpviewer-bottom-right"><i class="fa fa-check"></i><strong>3.1.4 Plots/Packages/Help/Viewer (Bottom Right)</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#start-our-initial-exploration-in-r"><i class="fa fa-check"></i><strong>3.2 Start our initial exploration in R</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#variables-and-variable-assignment"><i class="fa fa-check"></i><strong>3.3 Variables and Variable Assignment</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#functions-in-r"><i class="fa fa-check"></i><strong>3.3 Functions in R</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#packages-extending-the-power-of-r"><i class="fa fa-check"></i><strong>3.4 Packages: Extending the Power of R</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#setting-up-working-directory"><i class="fa fa-check"></i><strong>3.5 Setting up Working Directory</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#home-directory"><i class="fa fa-check"></i><strong>1. Home Directory</strong>:</a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#working-directory"><i class="fa fa-check"></i><strong>2. Working Directory</strong>:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#types-of-variables"><i class="fa fa-check"></i><strong>3.6 Types of Variables</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#numeric"><i class="fa fa-check"></i><strong>1. Numeric</strong>:</a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#character"><i class="fa fa-check"></i><strong>2. Character</strong>:</a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#logical"><i class="fa fa-check"></i><strong>3. Logical</strong>:</a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#factor"><i class="fa fa-check"></i><strong>4. Factor</strong>:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#data-structure-in-r"><i class="fa fa-check"></i><strong>3.7 Data Structure in R</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#vector"><i class="fa fa-check"></i><strong>1. Vector</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#dataframe"><i class="fa fa-check"></i><strong>2. Dataframe</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#list"><i class="fa fa-check"></i><strong>3. List</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#understanding-dataframes"><i class="fa fa-check"></i><strong>3.7 Understanding Dataframes</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#understanding-dataframes-rows-vs.-columns"><i class="fa fa-check"></i><strong>Understanding dataframes: Rows vs. Columns</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#rows-the-individualist-view-on-all-characteristics"><i class="fa fa-check"></i><strong>Rows: the Individualist View on All Characteristics</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#columns-the-collective-view-of-each-characteristic"><i class="fa fa-check"></i><strong>Columns: the Collective View of Each Characteristic</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#takeaway-1"><i class="fa fa-check"></i><strong>Takeaway</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#exercise-working-with-dataframes"><i class="fa fa-check"></i><strong>Exercise: Working with Dataframes</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#important-note-on-dataframes"><i class="fa fa-check"></i><strong>Important Note on Dataframes</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#avoiding-confusion-variables-in-dataframes-vs.-variables-in-basic-r"><i class="fa fa-check"></i><strong>Avoiding Confusion: Variables in Dataframes vs. Variables in Basic R</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><strong>4. Glossary</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#interfaces"><i class="fa fa-check"></i><strong>Interfaces</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#r-programming-basics"><i class="fa fa-check"></i><strong>R Programming Basics</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#directories"><i class="fa fa-check"></i><strong>Directories</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#data-types"><i class="fa fa-check"></i><strong>Data Types</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#data-structures"><i class="fa fa-check"></i><strong>Data Structures</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#dataframe-terminology"><i class="fa fa-check"></i><strong>Dataframe Terminology</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#operators"><i class="fa fa-check"></i><strong>Operators</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#exercise"><i class="fa fa-check"></i><strong>Exercise</strong></a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R Programing</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="glossary" class="section level1 hasAnchor">
+<h1><strong>4. Glossary</strong><a href="glossary.html#glossary" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Here’s a quick reference to key terms we’ve covered in this session:</p>
+<hr />
+<div id="interfaces" class="section level2 hasAnchor">
+<h2><strong>Interfaces</strong><a href="glossary.html#interfaces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Graphical User Interface (GUI)</strong>: Interaction with the computer using visual elements like buttons and menus.
+<ul>
+<li>Example: Clicking “File &gt; Open File” in RStudio.</li>
+</ul></li>
+<li><strong>Command-Line Interface (CLI)</strong>: Interaction with the computer by typing commands instead of using graphical elements.
+<ul>
+<li>Example: Typing <code>getwd()</code> in RStudio to print the current working directory.</li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="r-programming-basics" class="section level2 hasAnchor">
+<h2><strong>R Programming Basics</strong><a href="glossary.html#r-programming-basics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Variable</strong>: A named container that stores data in R.
+<ul>
+<li>Example: <code>x &lt;- 10</code></li>
+</ul></li>
+<li><strong>Function</strong>: A block of reusable code that performs a specific task. Functions take inputs (arguments) and return outputs.
+<ul>
+<li>Example: <code>sqrt(16)</code> calculates the square root of 16.</li>
+</ul></li>
+<li><strong>Parameter</strong>: A placeholder in a function definition that accepts input values. Parameters are defined in the function header.
+<ul>
+<li>Example: In the function <code>mean(x, na.rm = FALSE</code>), <code>x</code> and <code>na.rm</code> are parameters.</li>
+</ul></li>
+<li><strong>Argument</strong>: The actual values provided to a function when it is called. Arguments are passed to the parameters.
+<ul>
+<li>Example: In <code>mean(x = c(1, 2, 3), na.rm = TRUE</code>), <code>c(1, 2, 3)</code> is the argument for the parameter <code>x</code>, and <code>TRUE</code> is the argument for the parameter <code>na.rm</code>.</li>
+</ul></li>
+<li><strong>Package</strong>: A collection of pre-built R functions, datasets, and documentation designed for specific tasks. Packages extend R’s capabilities.
+<ul>
+<li>Example: <code>ggplot2</code> for advanced data visualization.</li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="directories" class="section level2 hasAnchor">
+<h2><strong>Directories</strong><a href="glossary.html#directories" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Home Directory</strong>: The default starting location on your computer for files.
+<ul>
+<li>Example: <code>C:/Users/YourName/Documents</code></li>
+</ul></li>
+<li><strong>Working Directory</strong>: The folder R is currently using to read or save files.
+<ul>
+<li>Example: Set with <code>setwd("path/to/folder")</code>.</li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="data-types" class="section level2 hasAnchor">
+<h2><strong>Data Types</strong><a href="glossary.html#data-types" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Numeric</strong>: Represents numbers (e.g., integers or doubles).</li>
+<li><strong>Character</strong>: Text or strings enclosed in quotes.
+<ul>
+<li>Example: <code>"Hello, World!"</code></li>
+</ul></li>
+<li><strong>Logical</strong>: Two-valued/binary/Boolean variables - either <code>TRUE</code> or <code>FALSE</code>, often used in conditions or comparisons</li>
+<li><strong>Factor</strong>: Categorical data with fixed levels.
+<ul>
+<li>Example: <code>factor(c("Male", "Female"))</code></li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="data-structures" class="section level2 hasAnchor">
+<h2><strong>Data Structures</strong><a href="glossary.html#data-structures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Vector</strong>: A one-dimensional collection of data of the same type.
+<ul>
+<li>Example: <code>c(1, 2, 3)</code></li>
+</ul></li>
+<li><strong>Dataframe</strong>: A two-dimensional structure with rows (observations) and columns (variables).
+<ul>
+<li>Example:</li>
+</ul>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="glossary.html#cb103-1" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">Name =</span> <span class="fu">c</span>(<span class="st">&quot;Alice&quot;</span>, <span class="st">&quot;Bob&quot;</span>), <span class="at">Age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>))</span></code></pre></div></li>
+<li><strong>List</strong>: A flexible collection that can store data of different types.
+<ul>
+<li>Example: <code>list(Name = "Alice", Scores = c(90, 85))</code></li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="dataframe-terminology" class="section level2 hasAnchor">
+<h2><strong>Dataframe Terminology</strong><a href="glossary.html#dataframe-terminology" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Observation</strong>: A row in a dataframe representing an individual entry.</li>
+<li><strong>Variable/Feature</strong>: A column in a dataframe representing a specific characteristic.</li>
+</ul>
+<hr />
+</div>
+<div id="operators" class="section level2 hasAnchor">
+<h2><strong>Operators</strong><a href="glossary.html#operators" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong><code>&lt;-</code></strong>: Used to assign values to variables (preferred over <code>=</code>).</li>
+<li><strong><code>=</code></strong>: Also used for assignment or to specify arguments in functions.</li>
+<li><strong><code>==</code></strong>: Comparison operator to check equality.</li>
+</ul>
+<hr />
+</div>
+<div id="exercise" class="section level2 hasAnchor">
+<h2><strong>Exercise</strong><a href="glossary.html#exercise" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>1. You downloaded a file called <code>data.csv</code> from the internet and ran the following code:</strong></p>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="glossary.html#cb104-1" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="st">&quot;data.csv&quot;</span>)</span></code></pre></div>
+<p><strong>However, you get an error saying <code>file not found</code>. What might be causing this issue, and how can you fix it?</strong></p>
+<details>
+<summary>
+Click for Answer
+</summary>
+<p><strong>Possible causes</strong>:</p>
+<ul>
+<li>The file <code>data.csv</code> is not in your current working directory. Check with <code>getwd()</code> and move the file there or specify the full path.</li>
+<li>The filename may have a typo or incorrect capitalization.</li>
+<li>The file extension <code>.csv</code> might be missing or incorrect.</li>
+</ul>
+<p><strong>Solutions</strong>:</p>
+<ul>
+<li>Use <code>getwd()</code> to confirm the working directory.</li>
+<li>Verify the filename and path.</li>
+<li>If the file is in another location, use <code>setwd()</code> or provide the full path, e.g., <code>read.csv("C:/Users/YourName/Documents/data.csv")</code>.
+</details></li>
+</ul>
+<p><br></p>
+<p><strong>2. In the function <code>mean(x = c(1, 3, 5), na.rm = TRUE)</code>:</strong></p>
+<ul>
+<li>Identify the <strong>parameters</strong>.</li>
+<li>Identify the <strong>arguments</strong>.</li>
+</ul>
+<details>
+<summary>
+Click for Answer
+</summary>
+<ul>
+<li><strong>Parameters</strong>: <code>x</code>, <code>na.rm</code><br />
+</li>
+<li><strong>Arguments</strong>: <code>c(1, 3, 5)</code> is the argument for <code>x</code>; <code>TRUE</code> is the argument for <code>na.rm</code>.
+</details></li>
+</ul>
+<p><br></p>
+<p><strong>3. What is the data structure of <code>c(12.5, 15.0, 20.0)</code> and what will be the output of the following code?</strong></p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="glossary.html#cb105-1" tabindex="-1"></a><span class="fu">typeof</span>(<span class="fu">c</span>(<span class="fl">12.5</span>, <span class="fl">15.0</span>, <span class="fl">20.0</span>))</span></code></pre></div>
+<details>
+<summary>
+Click for Answer
+</summary>
+<ul>
+<li>The data structure is a <strong>numeric vector</strong>.<br />
+</li>
+<li>The output of <code>typeof(c(12.5, 15.0, 20.0))</code> will be <code>"double"</code>.
+</details></li>
+</ul>
+<p><br></p>
+<p><strong>4. What will be the output of the following code?</strong></p>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="glossary.html#cb106-1" tabindex="-1"></a>fruits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;cherry&quot;</span>)</span>
+<span id="cb106-2"><a href="glossary.html#cb106-2" tabindex="-1"></a>fruits[<span class="dv">4</span>] <span class="ot">&lt;-</span> <span class="st">&quot;date&quot;</span></span>
+<span id="cb106-3"><a href="glossary.html#cb106-3" tabindex="-1"></a><span class="fu">print</span>(fruits)</span></code></pre></div>
+<details>
+<summary>
+Click for Answer
+</summary>
+<p>The output will be:</p>
+<pre><code>[1] &quot;apple&quot; &quot;banana&quot; &quot;cherry&quot; &quot;date&quot;</code></pre>
+Explanation: The <code>fruits</code> vector was extended to include “date” at index 4.
+</details>
+<p><br></p>
+<p><strong>5. What’s the output of the following code and what are the differences of x as variables in these two different contexts?</strong></p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="glossary.html#cb108-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb108-2"><a href="glossary.html#cb108-2" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>))</span>
+<span id="cb108-3"><a href="glossary.html#cb108-3" tabindex="-1"></a><span class="fu">print</span>(x)</span>
+<span id="cb108-4"><a href="glossary.html#cb108-4" tabindex="-1"></a><span class="fu">print</span>(df<span class="sc">$</span>x)</span></code></pre></div>
+<details>
+<summary>
+Click for Answer
+</summary>
+<p>The output will be:</p>
+<p><code>print(x)</code></p>
+<pre><code>[1] 1 2 3</code></pre>
+<p><code>print(df$x)</code></p>
+<pre><code>[1] 4 5 6</code></pre>
+<p>Explanation:</p>
+<ul>
+<li><p><strong><code>x</code> as a variable in R</strong>:</p>
+<ul>
+<li>A named container that stores data in R. Here, <code>x</code> is a standalone vector holding three numeric values: <code>1</code>, <code>2</code>, and <code>3</code>.</li>
+</ul></li>
+<li><p><strong><code>x</code> as a variable/feature in a dataframe</strong>:</p>
+<ul>
+<li>A column in the dataframe <code>df</code> that represents a specific characteristic. It is tied to the dataframe and must be accessed with <code>df$x</code>.</li>
+</ul></li>
+<li><p><strong>Key Difference</strong>:</p>
+<ul>
+<li><code>x</code> as a standalone variable and <code>x</code> as a column in a dataframe are both referred to as variables but differ in context.<br />
+</li>
+<li>In a dataframe, <strong>variables</strong> or <strong>features</strong> are stored in <strong>columns</strong>, which collectively describe given characteristics in a dataset.</li>
+</ul></li>
+</ul>
+</details>
+<p><br></p>
+<p><strong>6. What will the following code output and what’s the difference between <code>=</code> and <code>==</code> here?</strong></p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="glossary.html#cb111-1" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb111-2"><a href="glossary.html#cb111-2" tabindex="-1"></a><span class="fu">print</span>(x)</span>
+<span id="cb111-3"><a href="glossary.html#cb111-3" tabindex="-1"></a><span class="fu">print</span>(<span class="at">x =</span> <span class="dv">4</span>)</span>
+<span id="cb111-4"><a href="glossary.html#cb111-4" tabindex="-1"></a><span class="fu">print</span>(x <span class="sc">==</span> <span class="dv">3</span>)</span></code></pre></div>
+<details>
+<summary>
+Click for Answer
+</summary>
+<p>Output:</p>
+<ul>
+<li><code>print(x)</code>:</li>
+</ul>
+<pre><code>[1] 3</code></pre>
+<ul>
+<li><code>print(x = 4)</code>:</li>
+</ul>
+<pre><code>[1] 4</code></pre>
+<ul>
+<li><code>print(x == 3)</code>:</li>
+</ul>
+<pre><code>[1] TRUE</code></pre>
+<p>Explanation:</p>
+<ul>
+<li><p><strong><code>=</code> for assignment (though <code>&lt;-</code> is preferred in R)</strong>:</p>
+<ul>
+<li><code>x = 3</code> assigns the value <code>3</code> to the variable <code>x</code>.<br />
+</li>
+<li><code>x = 4</code> inside <code>print()</code> temporarily assigns <code>4</code> to <code>x</code> and returns it, but this does not persist. After this line, <code>x</code> still holds the value <code>3</code>.</li>
+</ul></li>
+<li><p><strong><code>==</code> for comparison</strong>:</p>
+<ul>
+<li><code>x == 3</code> checks whether the value of <code>x</code> is equal to <code>3</code> and returns <code>TRUE</code> since <code>x</code> was assigned <code>3</code> earlier.</li>
+</ul></li>
+<li><p><strong>Key Difference</strong>:</p>
+<ul>
+<li><code>=</code> is used to assign a value to a variable.<br />
+</li>
+<li><code>==</code> is used to compare values, returning <code>TRUE</code> if they are equal or <code>FALSE</code> otherwise.<br />
+</li>
+</ul></li>
+</ul>
+</details>
+<hr />
+<p><a href="index.html">Table of Contents</a> | <a href="exploring-r-basics.html">Previous: 3. Exploring R Basics</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exploring-r-basics.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

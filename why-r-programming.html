@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1. Why R Programming? | Introduction to R Programing</title>
+  <meta name="description" content="1. Why R Programming? | Introduction to R Programing" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1. Why R Programming? | Introduction to R Programing" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1. Why R Programming? | Introduction to R Programing" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="installation-of-base-r-and-rstudio.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Table of Contents</a></li>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html"><i class="fa fa-check"></i><strong>1. Why R Programming?</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html#whats-special-about-r"><i class="fa fa-check"></i><strong>1.1 What’s Special about R?</strong></a></li>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html#r-vs.-microsoft-excel"><i class="fa fa-check"></i><strong>1.2 R vs. Microsoft Excel</strong></a></li>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html#r-vs.-python"><i class="fa fa-check"></i><strong>1.3 R vs. Python</strong></a></li>
+<li class="chapter" data-level="" data-path="why-r-programming.html"><a href="why-r-programming.html#takeaway"><i class="fa fa-check"></i><strong>1.4 Takeaway</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="installation-of-base-r-and-rstudio.html"><a href="installation-of-base-r-and-rstudio.html"><i class="fa fa-check"></i><strong>2. Installation of Base R and RStudio</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="installation-of-base-r-and-rstudio.html"><a href="installation-of-base-r-and-rstudio.html#why-do-we-need-both-base-r-and-rstudio"><i class="fa fa-check"></i><strong>2.1 Why Do We Need Both Base R and RStudio?</strong></a></li>
+<li class="chapter" data-level="" data-path="installation-of-base-r-and-rstudio.html"><a href="installation-of-base-r-and-rstudio.html#steps-to-install-base-r-and-rstudio"><i class="fa fa-check"></i><strong>2.2 Steps to Install Base R and RStudio</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html"><i class="fa fa-check"></i><strong>3. Exploring R Basics</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#introduction-to-rstudio-interface"><i class="fa fa-check"></i><strong>3.1 Introduction to RStudio Interface</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#console-bottom-left"><i class="fa fa-check"></i><strong>3.1.1 Console (Bottom Left)</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#script-editor-top-left"><i class="fa fa-check"></i><strong>3.1.2 Script Editor (Top Left)</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#environmenthistory-top-right"><i class="fa fa-check"></i><strong>3.1.3 Environment/History (Top Right)</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#plotspackageshelpviewer-bottom-right"><i class="fa fa-check"></i><strong>3.1.4 Plots/Packages/Help/Viewer (Bottom Right)</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#start-our-initial-exploration-in-r"><i class="fa fa-check"></i><strong>3.2 Start our initial exploration in R</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#variables-and-variable-assignment"><i class="fa fa-check"></i><strong>3.3 Variables and Variable Assignment</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#functions-in-r"><i class="fa fa-check"></i><strong>3.3 Functions in R</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#packages-extending-the-power-of-r"><i class="fa fa-check"></i><strong>3.4 Packages: Extending the Power of R</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#setting-up-working-directory"><i class="fa fa-check"></i><strong>3.5 Setting up Working Directory</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#home-directory"><i class="fa fa-check"></i><strong>1. Home Directory</strong>:</a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#working-directory"><i class="fa fa-check"></i><strong>2. Working Directory</strong>:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#types-of-variables"><i class="fa fa-check"></i><strong>3.6 Types of Variables</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#numeric"><i class="fa fa-check"></i><strong>1. Numeric</strong>:</a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#character"><i class="fa fa-check"></i><strong>2. Character</strong>:</a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#logical"><i class="fa fa-check"></i><strong>3. Logical</strong>:</a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#factor"><i class="fa fa-check"></i><strong>4. Factor</strong>:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#data-structure-in-r"><i class="fa fa-check"></i><strong>3.7 Data Structure in R</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#vector"><i class="fa fa-check"></i><strong>1. Vector</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#dataframe"><i class="fa fa-check"></i><strong>2. Dataframe</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#list"><i class="fa fa-check"></i><strong>3. List</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#understanding-dataframes"><i class="fa fa-check"></i><strong>3.7 Understanding Dataframes</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#understanding-dataframes-rows-vs.-columns"><i class="fa fa-check"></i><strong>Understanding dataframes: Rows vs. Columns</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#rows-the-individualist-view-on-all-characteristics"><i class="fa fa-check"></i><strong>Rows: the Individualist View on All Characteristics</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#columns-the-collective-view-of-each-characteristic"><i class="fa fa-check"></i><strong>Columns: the Collective View of Each Characteristic</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#takeaway-1"><i class="fa fa-check"></i><strong>Takeaway</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#exercise-working-with-dataframes"><i class="fa fa-check"></i><strong>Exercise: Working with Dataframes</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#important-note-on-dataframes"><i class="fa fa-check"></i><strong>Important Note on Dataframes</strong></a></li>
+<li class="chapter" data-level="" data-path="exploring-r-basics.html"><a href="exploring-r-basics.html#avoiding-confusion-variables-in-dataframes-vs.-variables-in-basic-r"><i class="fa fa-check"></i><strong>Avoiding Confusion: Variables in Dataframes vs. Variables in Basic R</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><strong>4. Glossary</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#interfaces"><i class="fa fa-check"></i><strong>Interfaces</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#r-programming-basics"><i class="fa fa-check"></i><strong>R Programming Basics</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#directories"><i class="fa fa-check"></i><strong>Directories</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#data-types"><i class="fa fa-check"></i><strong>Data Types</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#data-structures"><i class="fa fa-check"></i><strong>Data Structures</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#dataframe-terminology"><i class="fa fa-check"></i><strong>Dataframe Terminology</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#operators"><i class="fa fa-check"></i><strong>Operators</strong></a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#exercise"><i class="fa fa-check"></i><strong>Exercise</strong></a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R Programing</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="why-r-programming" class="section level1 hasAnchor">
+<h1><strong>1. Why R Programming?</strong><a href="why-r-programming.html#why-r-programming" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<div id="whats-special-about-r" class="section level2 hasAnchor">
+<h2><strong>1.1 What’s Special about R?</strong><a href="why-r-programming.html#whats-special-about-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R was developed by <strong><em>statisticians</em></strong>, <strong>Ross Ihaka and Robert
+Gentleman</strong>, to specifically cater to the needs of statistical analysis
+and data visualization. Unlike general-purpose programming languages,
+R’s core features are designed to handle complex datasets and make it
+easier to perform tasks like modeling, plotting, and statistical
+analysis.</p>
+<p><br> <img src="RossIhaka.jpg" alt="Ross Ihaka" /> <img src="RobertGentleman.jpg" alt="Robert Gentleman" /></p>
+<p><br> One of the standout features of R is the <strong>tidyverse</strong>, a
+collection of <strong>“packages”</strong> created by <strong>Hadley Wickham</strong> and others to
+make data manipulation, visualization, and analysis more intuitive and
+consistent. The tidyverse follows a unified approach to data analysis,
+emphasizing human-readable code and tidy data principles, which make it
+especially accessible for beginners while being powerful for advanced
+users.</p>
+<p><br> <img src="Tidyverse.png" alt="tidyverse" /> <img src="HadleyWickham.jpg" alt="Hadley Wickham" /></p>
+<p><br> R is also <strong>open-source software, meaning it’s free to use and
+modify</strong>. This has allowed a global community of developers to create
+specialized tools (called <strong>“packages”</strong> in R) for virtually every area
+of data science. For example, many tools widely used in biology and
+bioinformatics—like genome sequencing and gene expression analysis—were
+developed in R. This makes it an ideal first choice for biologists and
+biomedical researchers starting their programming journey.</p>
+<hr />
+</div>
+<div id="r-vs.-microsoft-excel" class="section level2 hasAnchor">
+<h2><strong>1.2 R vs. Microsoft Excel</strong><a href="why-r-programming.html#r-vs.-microsoft-excel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>While Excel is a great tool for small-scale data manipulation and
+visualization, R offers significant advantages for <strong>customization</strong> and
+<strong>scalability</strong>:</p>
+<ul>
+<li><strong>Custom Features</strong>: In Excel, you’re often limited to built-in formulas
+and features for basic usage, but in R, you can conveniently write your own functions or use
+packages to create custom workflows, allowing you to handle <strong>more
+complex tasks</strong> much more easily.</li>
+<li><strong>Professional Visualizations</strong>: R allows you to create
+publication-ready visualizations with packages like <strong>ggplot2</strong>,
+which offer greater control over design and aesthetics.</li>
+</ul>
+<p><br> <img src="bbc.png" alt="BBC" /></p>
+<p><br>
+<strong>BBC Visual and Data Journalism team works with graphics in R</strong></p>
+<ul>
+<li><strong>Scalability</strong>: Excel struggles with very large datasets, often crashing or slowing down with tens of thousands of rows. In R, you don’t need to load the entire dataset into memory at once, as workflows often involve sampling and quality control to efficiently handle even <strong>millions of rows</strong> of data, provided your computer has sufficient resources.</li>
+</ul>
+<hr />
+</div>
+<div id="r-vs.-python" class="section level2 hasAnchor">
+<h2><strong>1.3 R vs. Python</strong><a href="why-r-programming.html#r-vs.-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The debate between R and Python remains a hot topic in data science.
+Here’s a simple breakdown:</p>
+<ul>
+<li><strong>Ease of Use</strong>: Python is often considered more intuitive as a
+general-purpose language, but R, especially with packages like
+tidyverse, provides <strong>a more elegant and structured way to handle
+data science tasks</strong>.</li>
+<li><strong>Specialized Tools</strong>: R is packed with tools designed by
+statisticians and researchers, making it particularly <strong>strong in
+biology and bioinformatics</strong>. Many statistical methods and
+visualization tools used in bioinformatics/computational biology
+appear in R first.</li>
+<li><strong>Flexibility</strong>: Python is highly versatile and widely used in areas
+like web development, AI, and machine learning. <em>For cutting-edge AI
+tools and modules, Python has a clear edge</em>.</li>
+</ul>
+<div class="float">
+<img src="RvsPython.png" alt="R vs Python" />
+<div class="figcaption">R vs Python</div>
+</div>
+<hr />
+</div>
+<div id="takeaway" class="section level2 hasAnchor">
+<h2><strong>1.4 Takeaway</strong><a href="why-r-programming.html#takeaway" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Programming languages are just tools. While learning the syntax of a
+language like R or Python is important, the most critical skill is
+learning how to <strong>think logically</strong> and <strong>solve problems</strong>. If Microsoft
+Excel is faster and more convenient for you and it’s sufficient to solve
+your problems, then use Excel.</p>
+<p><br> <em>“It doesn’t matter whether a cat is black or white, as long as it catches mice.”</em> - Deng Xiaoping</p>
+<p><br> Today, with tools like <strong>LLMs (e.g., ChatGPT)</strong>, you can get
+assistance writing code in any language so it’s way easier for beginners
+to navigate through coding, but it’s your ability to <strong>define the
+problem</strong> and <strong>structure a solution</strong> that makes the real difference.
+What matters most is understanding what you want to achieve and using
+the right language or tool for the task.</p>
+<p>What you need to be able to handle is how to <strong>define your problem</strong>,
+how to <strong>address it in steps</strong>, then what <strong>tools and functions</strong> to
+use. A lot of the time, the functions will be available in both R and
+Python—you just need to know the right codes and the right grammar.</p>
+<p>Think of programming like learning a language. When you want to
+communicate something, you start with an idea in your head (your
+problem). Then, you figure out how to express it in words (your steps).
+Finally, you choose the right vocabulary and grammar (your syntax and
+functions). Whether you’re speaking English, Thai, or French, as long as
+you know what you want to say, the language is just the tool you use to
+express it.</p>
+<p><br> <img src="languages.jpg" /></p>
+<p><br> <strong>Programming works the same way!</strong> However, a practical way to
+learn is to start with one so you know what you can do. Once you’re good
+at one programming language, learning another is much easier. It’s like
+learning how to say the same thing in a different language!</p>
+<p><br> <strong>Some other benefits to know R Programming</strong></p>
+<ul>
+<li>Many research projects in biomedical science (including mine!) rely
+on R. If you know even a little R, you can jump into interesting lab
+work way faster.</li>
+<li><strong>It looks great on your CV!</strong> Having R Programming skills makes you
+stand out for internships, research projects, and even jobs.</li>
+<li>You can explore your own data. Imagine being able to analyze and
+make sense of your own research without waiting for someone else to
+do it for you.</li>
+</ul>
+<hr />
+<p><a href="index.html">Previous: Table of Contents</a> | <a href="installation-of-base-r-and-rstudio.html">Next: 2. Installation of Base R and RStudio</a></p>
+
+<hr />
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="installation-of-base-r-and-rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
